@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09154B191D3D8F2B004BFCA5 /* ProfileInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09154B181D3D8F2B004BFCA5 /* ProfileInterfaceController.swift */; };
 		09A02BAF1D3D7F5D002C17E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A02BAE1D3D7F5D002C17E3 /* AppDelegate.swift */; };
 		09A02BB11D3D7F5D002C17E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A02BB01D3D7F5D002C17E3 /* ViewController.swift */; };
 		09A02BB41D3D7F5D002C17E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A02BB21D3D7F5D002C17E3 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		09A02BD61D3D7F5E002C17E3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A02BD51D3D7F5E002C17E3 /* ExtensionDelegate.swift */; };
 		09A02BD81D3D7F5E002C17E3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A02BD71D3D7F5E002C17E3 /* NotificationController.swift */; };
 		09A02BDA1D3D7F5E002C17E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A02BD91D3D7F5E002C17E3 /* Assets.xcassets */; };
+		09A02BEE1D3D8038002C17E3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A02BED1D3D8038002C17E3 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09154B181D3D8F2B004BFCA5 /* ProfileInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInterfaceController.swift; sourceTree = "<group>"; };
 		09A02BAB1D3D7F5D002C17E3 /* HealthMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A02BAE1D3D7F5D002C17E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09A02BB01D3D7F5D002C17E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +86,9 @@
 		09A02BD71D3D7F5E002C17E3 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		09A02BD91D3D7F5E002C17E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A02BDB1D3D7F5E002C17E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A02BE91D3D8008002C17E3 /* HealthMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HealthMonitor.entitlements; sourceTree = "<group>"; };
+		09A02BEC1D3D8038002C17E3 /* HealthMonitor WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "HealthMonitor WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		09A02BED1D3D8038002C17E3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A02BEE1D3D8038002C17E3 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +113,7 @@
 		09A02BA21D3D7F5D002C17E3 = {
 			isa = PBXGroup;
 			children = (
+				09A02BED1D3D8038002C17E3 /* HealthKit.framework */,
 				09A02BAD1D3D7F5D002C17E3 /* HealthMonitor */,
 				09A02BC11D3D7F5D002C17E3 /* HealthMonitor WatchKit App */,
 				09A02BD01D3D7F5E002C17E3 /* HealthMonitor WatchKit Extension */,
@@ -126,6 +134,7 @@
 		09A02BAD1D3D7F5D002C17E3 /* HealthMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				09A02BE91D3D8008002C17E3 /* HealthMonitor.entitlements */,
 				09A02BAE1D3D7F5D002C17E3 /* AppDelegate.swift */,
 				09A02BB01D3D7F5D002C17E3 /* ViewController.swift */,
 				09A02BB21D3D7F5D002C17E3 /* Main.storyboard */,
@@ -142,6 +151,7 @@
 				09A02BC21D3D7F5D002C17E3 /* Interface.storyboard */,
 				09A02BC51D3D7F5D002C17E3 /* Assets.xcassets */,
 				09A02BC71D3D7F5D002C17E3 /* Info.plist */,
+				09154B181D3D8F2B004BFCA5 /* ProfileInterfaceController.swift */,
 			);
 			path = "HealthMonitor WatchKit App";
 			sourceTree = "<group>";
@@ -149,6 +159,7 @@
 		09A02BD01D3D7F5E002C17E3 /* HealthMonitor WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				09A02BEC1D3D8038002C17E3 /* HealthMonitor WatchKit Extension.entitlements */,
 				09A02BD31D3D7F5E002C17E3 /* InterfaceController.swift */,
 				09A02BD51D3D7F5E002C17E3 /* ExtensionDelegate.swift */,
 				09A02BD71D3D7F5E002C17E3 /* NotificationController.swift */,
@@ -235,12 +246,24 @@
 				TargetAttributes = {
 					09A02BAA1D3D7F5D002C17E3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 73M5BP54FB;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 					09A02BBC1D3D7F5D002C17E3 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					09A02BCB1D3D7F5E002C17E3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 73M5BP54FB;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09154B191D3D8F2B004BFCA5 /* ProfileInterfaceController.swift in Sources */,
 				09A02BB11D3D7F5D002C17E3 /* ViewController.swift in Sources */,
 				09A02BAF1D3D7F5D002C17E3 /* AppDelegate.swift in Sources */,
 			);
@@ -443,6 +467,7 @@
 		09A02BDF1D3D7F5E002C17E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HealthMonitor WatchKit Extension/HealthMonitor WatchKit Extension.entitlements";
 				INFOPLIST_FILE = "HealthMonitor WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simoncook.HealthMonitor.watchkitapp.watchkitextension;
@@ -457,6 +482,7 @@
 		09A02BE01D3D7F5E002C17E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HealthMonitor WatchKit Extension/HealthMonitor WatchKit Extension.entitlements";
 				INFOPLIST_FILE = "HealthMonitor WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simoncook.HealthMonitor.watchkitapp.watchkitextension;
@@ -472,13 +498,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = HealthMonitor_WatchKit_Extension;
 				INFOPLIST_FILE = "HealthMonitor WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simoncook.HealthMonitor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthMonitor WatchKit App/HealthMonitor WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -488,13 +518,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = HealthMonitor_WatchKit_Extension;
 				INFOPLIST_FILE = "HealthMonitor WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simoncook.HealthMonitor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthMonitor WatchKit App/HealthMonitor WatchKit App-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -541,6 +574,7 @@
 				09A02BE01D3D7F5E002C17E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09A02BE21D3D7F5E002C17E3 /* Build configuration list for PBXNativeTarget "HealthMonitor WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +583,7 @@
 				09A02BE41D3D7F5E002C17E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09A02BE61D3D7F5E002C17E3 /* Build configuration list for PBXNativeTarget "HealthMonitor" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +592,7 @@
 				09A02BE81D3D7F5E002C17E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

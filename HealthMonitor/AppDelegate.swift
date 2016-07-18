@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -41,6 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func applicationShouldRequestHealthAuthorization(application: UIApplication) {
+        // create our healthkit object to handle reading and saving
+        let healthStore: HKHealthStore? = {
+            if HKHealthStore.isHealthDataAvailable() {
+                return HKHealthStore()
+            } else {
+                return nil
+            }
+        }()
+        
+        healthStore!.handleAuthorizationForExtensionWithCompletion {
+            success, error in
+            print(success == true ? "WatchKit Extension allowed access." : "WatchKit Extension didn't allow access.")
+        }
+    }
 }
 

@@ -1,16 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HealthMonitor_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="MXN-r2-VaR">
+                            <items>
+                                <label alignment="left" text="Health Data" id="ptT-OA-8Zy"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="ii2-hd-irU"/>
+                        <group width="1" alignment="left" id="Lpo-O2-Xo5">
+                            <items>
+                                <label alignment="left" text="Heart (bpm):" id="3di-2N-ODF"/>
+                                <label width="39" alignment="left" text="---" textAlignment="right" minimumScaleFactor="0.20000000000000001" id="Ilf-EP-fhS">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="eGf-Gj-l9K">
+                            <items>
+                                <label alignment="left" text="Steps:" id="4ks-ae-XJA"/>
+                                <label width="84" alignment="left" text="---" textAlignment="right" minimumScaleFactor="0.20000000000000001" id="2wP-SB-Sec"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start Monitoring" id="aAE-bv-NKc">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                            <connections>
+                                <action selector="startStopButtonPressed" destination="AgC-eL-Hgc" id="Qtw-4Y-5db"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="heartRate" destination="Ilf-EP-fhS" id="Lwt-vW-ojH"/>
+                        <outlet property="startStopButton" destination="aAE-bv-NKc" id="5KD-bL-TWV"/>
+                        <outlet property="startStopButtonPressed" destination="aAE-bv-NKc" id="N4v-q0-38U"/>
+                        <outlet property="stepCount" destination="2wP-SB-Sec" id="wna-46-CPc"/>
+                        <outlet property="steps" destination="2wP-SB-Sec" id="eyN-ad-enp"/>
+                        <segue destination="n8g-bM-g0v" kind="relationship" relationship="nextPage" id="4yz-m8-Qsw"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Profile Interface Controller-->
+        <scene sceneID="hNh-wG-EO0">
+            <objects>
+                <controller id="n8g-bM-g0v" customClass="ProfileInterfaceController" customModule="HealthMonitor_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="jWT-6S-jNe">
+                            <items>
+                                <label alignment="left" text="Profile Details" id="Oa5-RX-qSe"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Wvq-P5-YFX"/>
+                        <group width="1" alignment="left" id="Gl7-p5-p4J">
+                            <items>
+                                <label alignment="left" text="Birth Date:" id="fZL-Ph-qN3"/>
+                                <label width="52.5" alignment="left" text="---" textAlignment="right" minimumScaleFactor="0.20000000000000001" id="WuW-ft-eBV"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="fUt-ea-Vxl">
+                            <items>
+                                <label alignment="left" text="Age:" minimumScaleFactor="0.20000000000000001" id="6qv-Fv-aqs"/>
+                                <label width="98.5" alignment="left" text="---" textAlignment="right" id="Kmf-Ad-GhP"/>
+                            </items>
+                        </group>
+                        <group width="136" alignment="left" id="hNC-pq-IMB">
+                            <items>
+                                <label alignment="left" text="Sex:" id="Y1a-2x-JLI"/>
+                                <label width="99.5" alignment="left" text="---" textAlignment="right" id="cZc-GU-AxW"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="vcF-dw-Zli">
+                            <items>
+                                <label alignment="left" text="Blood Type:" id="grh-FX-1a2"/>
+                                <label width="45.5" alignment="left" text="---" textAlignment="right" id="U9J-Eh-xoN"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="profileAge" destination="Kmf-Ad-GhP" id="wvV-nV-CeJ"/>
+                        <outlet property="profileBloodType" destination="U9J-Eh-xoN" id="Fb0-A1-G5I"/>
+                        <outlet property="profileDoB" destination="WuW-ft-eBV" id="Nzo-N3-gcQ"/>
+                        <outlet property="profileSex" destination="cZc-GU-AxW" id="x89-Ac-uX4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="490" y="340"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +114,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HealthMonitor_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
