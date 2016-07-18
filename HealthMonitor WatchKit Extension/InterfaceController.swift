@@ -10,7 +10,6 @@ import WatchKit
 import Foundation
 import HealthKit
 
-
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet var heartRate: WKInterfaceLabel!
@@ -74,7 +73,4 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func startStopButtonPressed() {
     }
-    
-
-    
 }

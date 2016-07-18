@@ -39,10 +39,8 @@
                     </items>
                     <connections>
                         <outlet property="heartRate" destination="Ilf-EP-fhS" id="Lwt-vW-ojH"/>
-                        <outlet property="startStopButton" destination="aAE-bv-NKc" id="5KD-bL-TWV"/>
                         <outlet property="startStopButtonPressed" destination="aAE-bv-NKc" id="N4v-q0-38U"/>
                         <outlet property="stepCount" destination="2wP-SB-Sec" id="wna-46-CPc"/>
-                        <outlet property="steps" destination="2wP-SB-Sec" id="eyN-ad-enp"/>
                         <segue destination="n8g-bM-g0v" kind="relationship" relationship="nextPage" id="4yz-m8-Qsw"/>
                     </connections>
                 </controller>
