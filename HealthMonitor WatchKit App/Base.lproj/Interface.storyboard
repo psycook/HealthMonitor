@@ -39,7 +39,7 @@
                     </items>
                     <connections>
                         <outlet property="heartRate" destination="Ilf-EP-fhS" id="Lwt-vW-ojH"/>
-                        <outlet property="startStopButtonPressed" destination="aAE-bv-NKc" id="N4v-q0-38U"/>
+                        <outlet property="startStopButton" destination="aAE-bv-NKc" id="PnF-AP-aZL"/>
                         <outlet property="stepCount" destination="2wP-SB-Sec" id="wna-46-CPc"/>
                         <segue destination="n8g-bM-g0v" kind="relationship" relationship="nextPage" id="4yz-m8-Qsw"/>
                     </connections>
